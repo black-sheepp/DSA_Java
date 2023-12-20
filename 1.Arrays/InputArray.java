@@ -21,9 +21,17 @@ public class InputArray {
         return arr;
     }
 
+    public static int sumOfArraysElement(int [] arr){
+        int sum = 0;
+        for (int i = 0; i < arr.length ; i++) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
     public static void main(String[] args) {
         int arr[] = takeInput();
         printArray(arr);
-        
+        System.out.println("Sum of Arrays Element: " + sumOfArraysElement(arr));
     }
 }
