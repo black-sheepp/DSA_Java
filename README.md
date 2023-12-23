@@ -7,45 +7,52 @@ This repository contains Java implementations of fundamental linear data structu
 ## Table of Contents
 
 1. [Searching](#searching)
-    - Linear Search
-    - Binary Search
+
+     - Linear Search
+     - Binary Search
 
 2. [Sorting](#sorting)
-    - Bubble Sort
-    - Selection Sort
-    - Insertion Sort
-    - Merge Sort
-    - Quick Sort
+
+     - Bubble Sort
+     - Selection Sort
+     - Insertion Sort
+     - Merge Sort
+     - Quick Sort
 
 3. [Linked Lists](#linked-lists)
-    - Singly Linked List
-    - Doubly Linked List
-    - Circular Linked List
+
+     - Singly Linked List
+     - Doubly Linked List
+     - Circular Linked List
 
 4. [Stacks](#stacks)
-    - Stack Implementation
-    - Applications of Stacks
+
+     - Stack Implementation
+     - Applications of Stacks
 
 5. [Queues](#queues)
-    - Queue Implementation
-    - Circular Queue
-    - Priority Queue
+
+     - Queue Implementation
+     - Circular Queue
+     - Priority Queue
 
 6. [Recursions](#recursions)
-    - Recursive Algorithms
-    - Tail Recursion
-    - Applications of Recursion
+
+     - Recursive Algorithms
+     - Tail Recursion
+     - Applications of Recursion
 
 7. [Object-Oriented Programming (OOP)](#object-oriented-programming-oop)
-    - Classes and Objects
-    - Inheritance
-    - Polymorphism
-    - Encapsulation
-    - Abstraction
+
+     - Classes and Objects
+     - Inheritance
+     - Polymorphism
+     - Encapsulation
+     - Abstraction
 
 8. [Hash Maps](#hash-maps)
-    - HashMap Implementation
-    - Applications of HashMaps
+     - HashMap Implementation
+     - Applications of HashMaps
 
 ## Searching
 
@@ -55,7 +62,25 @@ Linear search is a simple search algorithm that sequentially checks each element
 
 ```java
 // Java implementation of Linear Search
-// ...
+    // Linear Search on Array
+    public static int linearSearch(int[] arr, int target) {
+            for (int i = 0; i < arr.length; i++) {
+                if (arr[i] == target) {
+                    return i; // Return the index if the target is found
+                }
+            }
+            return -1; // Return -1 if the target is not found
+        }
+
+    // Linear search on String
+    public static int linearSearch(String[] arr, String target) {
+            for (int i = 0; i < arr.length; i++) {
+                if (arr[i].equals(target)) {
+                    return i; // Return the index if the target is found
+                }
+            }
+            return -1; // Return -1 if the target is not found
+        }
 ```
 
 ### Binary Search
@@ -156,9 +181,9 @@ A stack is a Last In, First Out (LIFO) data structure where elements are added a
 
 ### Applications of Stacks
 
-- Expression Evaluation
-- Function Call Management
-- Undo Mechanism
+-    Expression Evaluation
+-    Function Call Management
+-    Undo Mechanism
 
 ## Queues
 
@@ -211,9 +236,9 @@ Tail recursion is a type of recursion where the recursive call is the last opera
 
 ### Applications of Recursion
 
-- Factorial Calculation
-- Fibonacci Sequence
-- Tower of Hanoi
+-    Factorial Calculation
+-    Fibonacci Sequence
+-    Tower of Hanoi
 
 ## Object-Oriented Programming (OOP)
 
@@ -275,9 +300,9 @@ A HashMap is a data structure that stores key-value pairs and allows fast retrie
 
 ### Applications of HashMaps
 
-- Caching
-- Frequency Counting
-- Indexing
+-    Caching
+-    Frequency Counting
+-    Indexing
 
 ## Conclusion
 
