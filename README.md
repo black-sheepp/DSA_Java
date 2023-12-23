@@ -62,25 +62,26 @@ Linear search is a simple search algorithm that sequentially checks each element
 
 ```java
 // Java implementation of Linear Search
-    // Linear Search on Array
-    public static int linearSearch(int[] arr, int target) {
-            for (int i = 0; i < arr.length; i++) {
-                if (arr[i] == target) {
-                    return i; // Return the index if the target is found
-                }
-            }
-            return -1; // Return -1 if the target is not found
-        }
 
-    // Linear search on String
-    public static int linearSearch(String[] arr, String target) {
-            for (int i = 0; i < arr.length; i++) {
-                if (arr[i].equals(target)) {
-                    return i; // Return the index if the target is found
-                }
-            }
-            return -1; // Return -1 if the target is not found
+// Linear Search on Array
+public static int linearSearch(int[] arr, int target) {
+    for (int i = 0; i < arr.length; i++) {
+        if (arr[i] == target) {
+            return i; // Return the index if the target is found
         }
+    }
+    return -1; // Return -1 if the target is not found
+}
+
+// Linear search on String
+public static int linearSearch(String[] arr, String target) {
+    for (int i = 0; i < arr.length; i++) {
+        if (arr[i].equals(target)) {
+            return i; // Return the index if the target is found
+        }
+    }
+    return -1; // Return -1 if the target is not found
+}
 ```
 
 ### Binary Search
