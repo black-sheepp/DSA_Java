@@ -119,7 +119,17 @@ Bubble sort is a simple sorting algorithm that repeatedly steps through the list
 
 ```java
 // Java implementation of Bubble Sort
-// ...
+for (int i = 0; i < array.length - 1; i++) {
+    for (int j = 0; j < array.length - i - 1; j++) {
+        // Swap if the element found is greater than the next element
+        if (arr[j] > arr[j + 1]) {
+            // Swap arr[j] and arr[j + 1]
+            int temp = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1] = temp;
+        }
+    }
+}
 ```
 
 ### Selection Sort
@@ -137,6 +147,7 @@ Selection sort is a simple sorting algorithm that repeatedly selects the minimum
         // Find the index of the minimum element in the unsorted part
         for (int j = i + 1; j < n; j++) {
             if (arr[j] < arr[minIndex]) {
+                // Update minIndex if a smaller element is found
                 minIndex = j;
             }
         }
