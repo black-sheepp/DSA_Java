@@ -219,6 +219,35 @@ public static void insertionSort(int[] arr) {
         }
     }
 }
+
+// optimizing the insertion sort algorithm by using binary search
+public static void insertionSortOptimized(int[] arr) {
+    int n = arr.length;
+
+    for (int i = 1; i < n; i++) {
+        int key = arr[i];
+        int j = i - 1;
+
+        // Find the index j within the sorted subset arr[0..i-1]
+        // where element arr[i] belongs
+        int index = Arrays.binarySearch(arr, 0, i, key);
+
+        // If element is not found in the array, it returns
+        // (-(insertion_point) - 1). So once we know the insertion point
+        // we can shift elements to right and insert the element
+        if (index < 0) {
+            index = -1 - index;
+        }
+
+        // Shifting the elements
+        while (j >= index) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        // Insert the element at its correct position
+        arr[j + 1] = key;
+    }
+}
 ```
 
 ### Merge Sort
