@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class BubbleSort {
 
@@ -26,7 +27,7 @@ public class BubbleSort {
         // passes. This optimization makes Bubble Sort perform well on already sorted
         // (or nearly sorted) lists, reducing the time complexity to O(n) in the best
         // case.
-        
+
         int n = arr.length;
         boolean swapped;
 
@@ -51,9 +52,38 @@ public class BubbleSort {
         }
     }
 
+    /**
+     * Generates an array of random numbers from 0 to the specified upper bound.
+     * 
+     * @param arraySize  the size of the array
+     * @param arrayBound the upper bound of the random numbers
+     * @return the generated array of random numbers
+     */
+
+    public static int[] generateRandomArray(int arraySize, int arrayBound) {
+        int[] array = new int[arraySize];
+
+        for (int i = 0; i < arraySize; i++) {
+            // Generate random numbers from 0 to arrayBound
+            array[i] = (int) (Math.random() * arrayBound);
+        }
+
+        return array;
+    }
+
     public static void main(String[] args) {
-        int arr[] = { 3, 6, 4, 7, 4, 5, 9, 1, 2, 8 };
-        bubbleSort(arr);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of the array and the upper bound of the random numbers: ");
+        int arraySize = sc.nextInt(); // Size of the array
+        int arrayBound = sc.nextInt(); // Upper bound of the random numbers
+
+        int[] arr = generateRandomArray(arraySize, arrayBound);
+
+        System.out.println("The generated array is: " + Arrays.toString(arr));
+
+        // bubbleSort(arr);
+        bubbleSortOptimized(arr);
+        System.out.print("Bubble Sorted Array : " );
         System.out.println(Arrays.toString(arr));
     }
 }
