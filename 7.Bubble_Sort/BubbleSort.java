@@ -16,6 +16,7 @@ public class BubbleSort {
                     arr[j + 1] = temp;
                 }
             }
+            System.out.println(Arrays.toString(arr));
         }
     }
 
@@ -76,13 +77,11 @@ public class BubbleSort {
         System.out.println("Enter the size of the array and the upper bound of the random numbers: ");
         int arraySize = sc.nextInt(); // Size of the array
         int arrayBound = sc.nextInt(); // Upper bound of the random numbers
-
         int[] arr = generateRandomArray(arraySize, arrayBound);
-
         System.out.println("The generated array is: " + Arrays.toString(arr));
 
-        // bubbleSort(arr);
-        bubbleSortOptimized(arr);
+        bubbleSort(arr);
+        // bubbleSortOptimized(arr);
         System.out.print("Bubble Sorted Array : " );
         System.out.println(Arrays.toString(arr));
     }
