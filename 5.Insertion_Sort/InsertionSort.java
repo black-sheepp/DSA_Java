@@ -3,6 +3,12 @@ import java.util.Scanner;
 
 public class InsertionSort {
 
+    /**
+     * Sorts an array of integers using the insertion sort algorithm.
+     *
+     * @param arr the array of integers to be sorted
+     */
+
     public static void insertionSort(int[] arr) {
         int n = arr.length;
 

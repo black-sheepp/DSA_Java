@@ -1,6 +1,27 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * The QuickSort class provides methods for performing the QuickSort algorithm on an array of integers.
+ * 
+ * The class includes a static method 'quickSort' that takes an array of integers as input and sorts it in ascending order using the QuickSort algorithm.
+ * 
+ * The class also includes a static method 'generateRandomArray' that generates a random array of integers with a specified size and upper bound for the random numbers.
+ * 
+ * The main method of the class demonstrates the usage of the 'quickSort' method by generating a random array, sorting it using QuickSort, and printing the sorted array.
+ * 
+ * Example usage:
+ * 
+ *     int[] array = QuickSort.generateRandomArray(10, 100);
+ *     System.out.println("Original array: " + Arrays.toString(array));
+ *     
+ *     QuickSort.quickSort(array);
+ *     System.out.println("Sorted array: " + Arrays.toString(array));
+ * 
+ * This class requires the 'java.util.Arrays' and 'java.util.Scanner' packages to be imported.
+ */
+
+
 public class QuickSort {
 
     public static void quickSort(int[] arr) {

@@ -1,6 +1,32 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * The BubbleSort class provides methods for sorting an array using the Bubble Sort algorithm.
+ * It includes both a basic implementation and an optimized version of the algorithm.
+ * 
+ * The Bubble Sort algorithm works by repeatedly swapping adjacent elements if they are in the wrong order.
+ * This process is repeated until the entire array is sorted.
+ * 
+ * The optimized version of the algorithm includes a flag that checks if a swap has occurred in the inner loop.
+ * If no swap has occurred in a complete pass of the inner loop, it means the array is already sorted and there's no need to continue with further passes.
+ * This optimization reduces the time complexity to O(n) in the best case scenario.
+ * 
+ * The BubbleSort class also includes a method for generating an array of random numbers within a specified range.
+ * 
+ * Example usage:
+ * 
+ * int[] arr = BubbleSort.generateRandomArray(10, 100);
+ * BubbleSort.bubbleSort(arr);
+ * System.out.println(Arrays.toString(arr));
+ * 
+ * Output:
+ * [12, 23, 34, 45, 56, 67, 78, 89, 90, 99]
+ * 
+ * @author [Your Name]
+ * @version [Date]
+ */
+
 public class BubbleSort {
 
     public static void bubbleSort(int[] arr) {

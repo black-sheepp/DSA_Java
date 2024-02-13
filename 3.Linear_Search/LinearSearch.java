@@ -1,16 +1,19 @@
 import java.util.*;
 
 public class LinearSearch {
-    // Dont get confisued with same function name for string and array linear
-    // search, this is function overloading and JVM automatically call the funtion
-    // accordingly with the passing parameter and arguements.
-
-    // What is funtion overloading ?
-    // Function overloading allows the definition of multiple functions with the
-    // same name but different parameter types or numbers. The compiler determines
-    // the correct function to call based on the provided arguments at compile time.
-    // This feature enhances code readability and supports cleaner APIs by using a
-    // single function name for related operations.
+    /**
+     * This code snippet demonstrates the concept of function overloading in Java.
+     * It provides two implementations of linear search, one for integer arrays and
+     * another for string arrays. The linearSearch method takes an array and a
+     * target
+     * value as parameters and returns the index of the target value if found, or -1
+     * if not found. The main method creates an integer array and a string array,
+     * and
+     * calls the linearSearch method with different target values to demonstrate its
+     * usage. This code snippet serves as a basic example of how to implement and
+     * use
+     * function overloading in Java.
+     */
 
     public static int linearSearch(int[] arr, int target) {
         for (int i = 0; i < arr.length; i++) {

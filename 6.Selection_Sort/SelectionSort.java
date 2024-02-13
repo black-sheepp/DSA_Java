@@ -5,6 +5,25 @@
 
 import java.util.Arrays;
 
+/**
+ * The SelectionSort class implements the selection sort algorithm to sort an
+ * array of integers in ascending order.
+ * The selection sort algorithm works by repeatedly finding the minimum element
+ * from the unsorted part of the array
+ * and swapping it with the first element of the unsorted part. This process is
+ * repeated until the entire array is sorted.
+ * 
+ * Example usage:
+ * 
+ * int[] arr = { 2, 5, 3, 7, 1, 6, 2, 3, 4, 5, 6, 7 };
+ * SelectionSort.selectionSort(arr);
+ * System.out.println(Arrays.toString(arr)); // Output: [1, 2, 2, 3, 3, 4, 5, 5,
+ * 6, 6, 7, 7]
+ * 
+ * Time Complexity: O(n^2)
+ * Space Complexity: O(1)
+ */
+
 public class SelectionSort {
     public static void selectionSort(int[] arr) {
         int n = arr.length;
